@@ -1,0 +1,14 @@
+generates:
+  ./types.ts:
+    plugins:
+      - typescript
+  ./:
+    preset: near-operation-file
+    config:
+      preResolveTypes: false
+    presetConfig:
+      extension: .generated.tsx
+      baseTypesPath: types.ts
+    plugins:
+      - typescript-operations
+      - typed-document-node
